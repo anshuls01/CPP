@@ -3,13 +3,17 @@
 #include <cstdlib>
 #include <ctime>
 #include<array>
+#include "MyClass.h"
 using namespace std;
 
-void swapIntegerValue(int *a, int *b) {
-    int *c = b;
+void swapIntegerValueByRef(int &a, int &b) {
+    int c = b;
     b = a;
     a = c;
 }
+
+
+int sum(int a, int b);// declaration
 int main() {
     // cout << "Convert from fahrenheit to Celsius" << endl;
     // cout << "Insert temprature in Fahrenheit: ";
@@ -26,37 +30,121 @@ int main() {
     // getline(cin, myVariable);
     // cout << myVariable << endl;
 
-    cout << "Arrays in c++" << endl;
-    int array[] = {1,2,3,4};
-    // for(int i:array) {
-    //     cout << i <<endl;
+    // cout << "Arrays in c++" << endl;
+    // int array[] = {1,2,3,4};
+    // // for(int i:array) {
+    // //     cout << i <<endl;
+    // // }
+    // cout << "Size of int Array : ";
+    // cout << sizeof(array)/sizeof(int)<<endl;
+    //
+    // string stringArray[] = {"abc","dffg","a"};
+    // cout << "Length of string array :";
+    // int counter= 0;
+    // for(string s:stringArray) {
+    //  counter++;
     // }
-    cout << "Size of int Array : ";
-    cout << sizeof(array)/sizeof(int)<<endl;
+    // cout << counter <<endl;
+    // cout << "Length of string array :";
+    // cout<< end(stringArray) - begin(stringArray)<<endl;
+    //
+    // cout << "Length of string array using standard library: ";
+    // cout<< stringArray->size()<<endl;
+    // int length = *(&stringArray +1)-stringArray;
+    // cout<< length <<endl;
 
-    string stringArray[] = {"abc","dffg","a"};
-    cout << "Length of string array :";
-    int counter= 0;
-    for(string s:stringArray) {
-     counter++;
-    }
-    cout << counter <<endl;
-    cout << "Length of string array :";
-    cout<< end(stringArray) - begin(stringArray)<<endl;
+    // cout << "Multi Dimensional array" << endl;
+    // string letters[2][4] = {
+    //     {
+    //         "A", "B", "C, "D"
+    //     },
+    //     {
+    //         "A", "B", "C, "D"
+    //     }
+    // };
 
-    cout << "Length of string array using standard library: ";
-    cout<< stringArray->size()<<endl;
-    int length = *(&stringArray +1)-stringArray;
-    cout<< length <<endl;
+    // cout << "Structure" <<endl;;
+    // struct {
+    //     string name;
+    //     int value;
+    // } struct1;
+    //
+    // struct1.name="xyz";
+    // struct1.value=1;
+    //
+    // cout << struct1.name << "," << struct1.value <<endl;
+    //
+    // cout << "structure with multiple valriables" <<endl;
+    // struct {
+    //     string brand;
+    //     string model;
+    //     int year;
+    // } myCar1, myCar2;
+    //
+    // myCar1.brand = "BMW";
+    // myCar1.model = "X5";
+    // myCar1.year = 1999;
+    //
+    // // Put data into the second structure
+    // myCar2.brand = "Ford";
+    // myCar2.model = "Mustang";
+    // myCar2.year = 1969;
+    //
+    // cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+    // cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+
+    // cout << "Named structure" <<endl;
+    // struct mystruct{
+    //     string name;
+    //     int value;
+    // };
+    // mystruct car1;
+    // car1.name="BMW";
+    // car1.value= 1999;
+    //
+    // mystruct car2;
+    // car2.name="Ford";
+    // car2.value= 1969;
+    //
+    // cout << car1.name << " " << car1.value  << "\n";
+    // cout << car2.name << " " << car2.value  << "\n";
+
+    // cout << "Reference Variables" <<endl;;
+    // string food = "Pizza";
+    // string &meal = food;
+    //
+    // cout << food << "  " << meal <<endl;
+    // cout << "Food address is : " << &meal << endl;
+    // cout << &food << endl;
+
+    // cout << "Pointers" <<endl;;
+    // string food = "Pizza";
+    // string* ptr = &food;
+    // cout << ptr<<endl;
+    // cout << *ptr<<endl;
+    // *ptr="Burger";
+    // cout << *ptr << endl;
+    // cout<< food << endl;
+
+    // cout << "function declaration and definition" << endl;
+    // cout << sum(2,2) << endl;
+
     // int a = 1;
     // int b = 2;
-    // // cout<<a<<endl;
-    // // cout<<b;
-    // swapIntegerValue(&a, &b);
     // cout<<a<<endl;
-    // cout<<b;
+    // cout<<b<< endl;
+    // swapIntegerValueByRef(a, b);
+    // cout<<a<<endl;
+    // cout<<b<<endl;
+
+    MyClass obj;
+    obj.name="sedfw";
+    obj.value=123;
+    obj.printValue();
     return 0;
 
 }
 
-
+int sum(int a, int b) {
+    return a+b;
+}
