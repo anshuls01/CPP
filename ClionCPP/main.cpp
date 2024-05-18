@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include<array>
+#include <vector>;
 #include "MyClass.h"
 using namespace std;
 
@@ -137,10 +138,24 @@ int main() {
     // cout<<a<<endl;
     // cout<<b<<endl;
 
-    MyClass obj;
-    obj.name="sedfw";
-    obj.value=123;
-    obj.printValue();
+    // MyClass obj;
+    // obj.name="sedfw";
+    // obj.value=123;
+    // obj.printValue();
+
+    // cout << "Vectors" << endl;
+    // vector<int> ints;
+    // vector<int> ints1 = {1,2,3,4,5}; // 5 length vector
+    // vector<int> ints2(2); //use construstor to intialize the vector of length 2, and all index values to zero
+    // vector<int> ints3 (5, 80); // 5 length vector and intialized every value with 80;
+    //
+    // cout << ints1.at(0) << endl;
+    // cin >> ints1.at(0) ;
+    // cout << ints1.at(0) << endl;
+    //
+    // ints3.push_back(100);
+    // cout << ints3[5] << endl;
+
     return 0;
 
 }
