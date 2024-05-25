@@ -61,6 +61,12 @@ build CMakeFiles/ClionCPP.dir/MyClass.cpp.o: CXX_COMPILER__ClionCPP_unscanned_De
   OBJECT_DIR = CMakeFiles/ClionCPP.dir
   OBJECT_FILE_DIR = CMakeFiles/ClionCPP.dir
 
+build CMakeFiles/ClionCPP.dir/FirstProgram.cpp.o: CXX_COMPILER__ClionCPP_unscanned_Debug /Users/anshul.singhal/Documents/Dummy/CPP/ClionCPP/FirstProgram.cpp || cmake_object_order_depends_target_ClionCPP
+  DEP_FILE = CMakeFiles/ClionCPP.dir/FirstProgram.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/ClionCPP.dir
+  OBJECT_FILE_DIR = CMakeFiles/ClionCPP.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ClionCPP
@@ -69,7 +75,7 @@ build CMakeFiles/ClionCPP.dir/MyClass.cpp.o: CXX_COMPILER__ClionCPP_unscanned_De
 #############################################
 # Link the executable ClionCPP
 
-build ClionCPP: CXX_EXECUTABLE_LINKER__ClionCPP_Debug CMakeFiles/ClionCPP.dir/main.cpp.o CMakeFiles/ClionCPP.dir/MyClass.cpp.o
+build ClionCPP: CXX_EXECUTABLE_LINKER__ClionCPP_Debug CMakeFiles/ClionCPP.dir/main.cpp.o CMakeFiles/ClionCPP.dir/MyClass.cpp.o CMakeFiles/ClionCPP.dir/FirstProgram.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   OBJECT_DIR = CMakeFiles/ClionCPP.dir
   POST_BUILD = :

@@ -1,7 +1,6 @@
-//
-// Created by Anshul Singhal on 17/05/24.
-//
-
 #include "MyClass.h"
 
-
+    void MyClass::printValue()
+    {
+        cout << name << " " << value << endl;
+    }
